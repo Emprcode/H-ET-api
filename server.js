@@ -3,9 +3,7 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import cors from "cors";
 import UserRouter from "./src/routers/UserRouter.js";
-import TransRouter from "./src/routers/TransRouter.js";
 import { connectDB } from "./src/config/dbConfig.js";
-import { userAuth } from "./src/middleware/authMiddleware.js";
 dotenv.config();
 
 const app = express();
@@ -23,7 +21,6 @@ app.use(cors());
 connectDB();
 
 app.use("/api/v1/user", UserRouter);
-app.use("/api/v1/transaction", userAuth, TransRouter);
 
 //uncaught error handler
 
