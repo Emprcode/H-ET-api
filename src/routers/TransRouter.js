@@ -1,5 +1,10 @@
 import express from "express";
-import { addTransaction, getTransactions } from "../model/trans/TransModel.js";
+import {
+  addTransaction,
+  deleteTransactionById,
+  editSingleTransaction,
+  getTransactions,
+} from "../model/trans/TransModel.js";
 
 const router = express.Router();
 

@@ -4,6 +4,7 @@ import morgan from "morgan";
 import cors from "cors";
 import UserRouter from "./src/routers/UserRouter.js";
 import { connectDB } from "./src/config/dbConfig.js";
+import Transrouter from "./src/routers/TransRouter.js";
 dotenv.config();
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(cors());
 connectDB();
 
 app.use("/api/v1/user", UserRouter);
+app.use("/api/v1/transaction", Transrouter)
 
 //uncaught error handler
 

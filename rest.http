@@ -1,5 +1,18 @@
-###
-GET http://localhost:8000/api/v1/transaction
-Content-Type: application/json
-Authorization: 63f4196432cce70daf4b7112
+###    
+POST http://localhost:8000/api/v1/transaction
+Content-Type: application/json 
+authorization: 6418ff0c0e4d85d4f7e8ab26
+
+{
+    "type":"income",
+    "name":"Salary",
+    "amount":"1000"
+}
     
+###    
+GET http://localhost:8000/api/v1/transaction
+authorization: 6418ff0c0e4d85d4f7e8ab26
+
+###    
+DELETE  http://localhost:8000/api/v1/transaction
+authorization: 6418ff0c0e4d85d4f7e8ab26
